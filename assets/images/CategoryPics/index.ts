@@ -3,6 +3,7 @@ import Pic2 from "./2.png";
 import Pic3 from "./3.png";
 import Pic4 from "./4.png";
 import Pic5 from "./5.png";
+import Pic6 from "./6.png";
 
 const CategoryPics = {
   Pic1,
@@ -10,6 +11,7 @@ const CategoryPics = {
   Pic3,
   Pic4,
   Pic5,
+  Pic6,
 };
 
 export default CategoryPics;

@@ -26,4 +26,9 @@ export const CategoryData = [
     title: "Photographer",
     image: CategoryPics.Pic5,
   },
+  {
+    id: "6",
+    title: null,
+    image: CategoryPics.Pic6,
+  },
 ];

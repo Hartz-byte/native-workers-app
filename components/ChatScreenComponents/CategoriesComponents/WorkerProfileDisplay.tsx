@@ -8,6 +8,9 @@ import {
 } from "react-native";
 import React, { FC } from "react";
 
+const PAGE_WIDTH = Dimensions.get("window").width;
+
+// interface WorkerProfileDisplayProps
 interface WorkerProfileDisplayProps {
   item: {
     profileImage: any;
@@ -16,8 +19,6 @@ interface WorkerProfileDisplayProps {
   };
   containerStyle?: ViewStyle;
 }
-
-const PAGE_WIDTH = Dimensions.get("window").width;
 
 const WorkerProfileDisplay: FC<WorkerProfileDisplayProps> = ({
   item,
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
   },
   name: {
     marginTop: PAGE_WIDTH * 0.02,
-    fontSize: PAGE_WIDTH * 0.03,
+    fontSize: PAGE_WIDTH * 0.032,
     textAlign: "center",
   },
 });

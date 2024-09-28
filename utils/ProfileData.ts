@@ -28,7 +28,7 @@ export const ProfileData = [
     name: "Victoria",
     profileImage: ProfileImages.Pic4,
     countryImage: FlagPics.Flag4,
-    Worker_Role: "Mehndi",
+    Worker_Role: "Mehandi",
   },
   {
     id: "5",
@@ -49,7 +49,7 @@ export const ProfileData = [
     name: "Kyle",
     profileImage: ProfileImages.Pic5,
     countryImage: FlagPics.Flag1,
-    Worker_Role: "Astrologer",
+    Worker_Role: "Assistant",
   },
   {
     id: "8",
@@ -84,7 +84,7 @@ export const ProfileData = [
     name: "Ronald",
     profileImage: ProfileImages.Pic8,
     countryImage: FlagPics.Flag1,
-    Worker_Role: "Mehndi",
+    Worker_Role: "Mehandi",
   },
   {
     id: "13",
@@ -105,14 +105,14 @@ export const ProfileData = [
     name: "Eduardo",
     profileImage: ProfileImages.Pic18,
     countryImage: FlagPics.Flag3,
-    Worker_Role: "Mehndi",
+    Worker_Role: "Mehandi",
   },
   {
     id: "16",
     name: "Cameron",
     profileImage: ProfileImages.Pic19,
     countryImage: FlagPics.Flag1,
-    Worker_Role: "Mehndi",
+    Worker_Role: "Mehandi",
   },
   {
     id: "17",
