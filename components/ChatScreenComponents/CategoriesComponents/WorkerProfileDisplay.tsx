@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   profileImage: {
-    width: 65,
-    height: 65,
+    width: 68,
+    height: 68,
     borderRadius: 50,
   },
   countryImage: {

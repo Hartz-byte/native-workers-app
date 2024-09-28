@@ -1,18 +1,52 @@
 import {
   Dimensions,
+  Image,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
 import { Feather, SimpleLineIcons, Ionicons } from "@expo/vector-icons";
+import Carousel from "react-native-reanimated-carousel";
+
+import { CategoryData } from "@/utils/CategoryData";
+
+const PAGE_WIDTH = Dimensions.get("window").width;
+const COUNT = 5;
 
 const HeaderSection = () => {
+  const baseOptions = {
+    vertical: false,
+    width: PAGE_WIDTH / COUNT,
+    height: 100,
+    style: {
+      width: PAGE_WIDTH,
+    },
+  } as const;
+
   return (
     <View>
-      {/* categories */}
-      <View style={styles.categoryContainer}></View>
+      {/* categories carousel */}
+      <View style={styles.categoryContainer}>
+        <Carousel
+          {...baseOptions}
+          loop
+          autoPlay={true}
+          autoPlayInterval={2000}
+          data={CategoryData}
+          renderItem={({ item }) => (
+            <View style={styles.carouselItem}>
+              <TouchableOpacity>
+                <Image source={item.image} style={styles.categoryImage} />
+              </TouchableOpacity>
+
+              <Text style={styles.categoryText}>{item.title}</Text>
+            </View>
+          )}
+        />
+      </View>
 
       {/* search bar */}
       <View style={styles.flex}>
@@ -72,5 +106,21 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
+  },
+  carouselItem: {
+    width: PAGE_WIDTH,
+    height: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 5,
+  },
+  categoryImage: {
+    width: 50,
+    height: 50,
+  },
+  categoryText: {
+    marginTop: 5,
+    textAlign: "center",
+    fontSize: 12,
   },
 });
