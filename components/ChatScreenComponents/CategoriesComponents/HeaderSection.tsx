@@ -10,7 +10,7 @@ import { Feather, SimpleLineIcons, Ionicons } from "@expo/vector-icons";
 
 const HeaderSection = () => {
   return (
-    <View style={styles.container}>
+    <View>
       {/* categories */}
       <View style={styles.categoryContainer}></View>
 
@@ -42,9 +42,6 @@ const HeaderSection = () => {
 export default HeaderSection;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   categoryContainer: {
     width: Dimensions.get("window").width,
     height: 100,
