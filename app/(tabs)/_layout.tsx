@@ -19,7 +19,7 @@ export default function Layout() {
           paddingLeft: 10,
           paddingRight: 10,
         },
-        tabBarActiveTintColor: "#fb8500",
+        tabBarActiveTintColor: "#dc2f02",
         tabBarInactiveTintColor: "#000",
       }}
     >
@@ -35,12 +35,12 @@ export default function Layout() {
               <Ionicons
                 name="chatbubbles-outline"
                 size={24}
-                color={focused ? "#fb8500" : "#000"}
+                color={focused ? "#dc2f02" : "#000"}
               />
 
               <Text
                 style={{
-                  color: focused ? "#fb8500" : "#000",
+                  color: focused ? "#dc2f02" : "#000",
                   fontSize: 14,
                 }}
               >
@@ -63,12 +63,12 @@ export default function Layout() {
               <Feather
                 name="phone-call"
                 size={24}
-                color={focused ? "#fb8500" : "#000"}
+                color={focused ? "#dc2f02" : "#000"}
               />
 
               <Text
                 style={{
-                  color: focused ? "#fb8500" : "#000",
+                  color: focused ? "#dc2f02" : "#000",
                   fontSize: 14,
                 }}
               >
@@ -91,12 +91,12 @@ export default function Layout() {
               <MaterialIcons
                 name="qr-code-scanner"
                 size={24}
-                color={focused ? "#fb8500" : "#000"}
+                color={focused ? "#dc2f02" : "#000"}
               />
 
               <Text
                 style={{
-                  color: focused ? "#fb8500" : "#000",
+                  color: focused ? "#dc2f02" : "#000",
                   fontSize: 14,
                 }}
               >
@@ -119,12 +119,12 @@ export default function Layout() {
               <MaterialIcons
                 name="favorite-border"
                 size={24}
-                color={focused ? "#fb8500" : "#000"}
+                color={focused ? "#dc2f02" : "#000"}
               />
 
               <Text
                 style={{
-                  color: focused ? "#fb8500" : "#000",
+                  color: focused ? "#dc2f02" : "#000",
                   fontSize: 14,
                 }}
               >
@@ -147,12 +147,12 @@ export default function Layout() {
               <Foundation
                 name="ticket"
                 size={24}
-                color={focused ? "#fb8500" : "#000"}
+                color={focused ? "#dc2f02" : "#000"}
               />
 
               <Text
                 style={{
-                  color: focused ? "#fb8500" : "#000",
+                  color: focused ? "#dc2f02" : "#000",
                   fontSize: 14,
                 }}
               >
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   upperLine: {
     width: 35,
     height: 2,
-    backgroundColor: "#fb8500",
+    backgroundColor: "#dc2f02",
     position: "absolute",
     top: -10,
   },

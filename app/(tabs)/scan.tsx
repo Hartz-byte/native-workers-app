@@ -3,12 +3,22 @@ import React from "react";
 
 const Scan = () => {
   return (
-    <View>
-      <Text>Scan</Text>
+    <View style={styles.mainContainer}>
+      <Text style={styles.text}>Scan</Text>
     </View>
   );
 };
 
 export default Scan;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontWeight: "bold",
+    fontSize: 20,
+  },
+});
