@@ -49,13 +49,15 @@ const HeaderSection: FC<HeaderSectionProps> = ({
           data={CategoryData}
           renderItem={({ item }) => (
             <View style={styles.carouselItem}>
-              {/* category */}
-              <TouchableWithoutFeedback
-                onPress={() => onCategorySelect(item.title)}
-                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-              >
-                <Image source={item.image} style={styles.categoryImage} />
-              </TouchableWithoutFeedback>
+              {/* category button */}
+              <View style={styles.buttonContainer}>
+                <TouchableWithoutFeedback
+                  onPress={() => onCategorySelect(item.title)}
+                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
+                  <Image source={item.image} style={styles.categoryImage} />
+                </TouchableWithoutFeedback>
+              </View>
 
               {/* category title */}
               {item.title !== null ? (
@@ -142,6 +144,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: 4,
+  },
+  buttonContainer: {
+    width: PAGE_WIDTH * 0.12,
+    height: PAGE_WIDTH * 0.12,
+    backgroundColor: "#fff",
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center",
   },
   categoryImage: {
     width: PAGE_WIDTH * 0.12,
