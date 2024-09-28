@@ -6,7 +6,11 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView>
       {/* statusbar */}
-      <StatusBar barStyle="dark-content" />
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
 
       {/* stack */}
       <Stack>
