@@ -20,7 +20,7 @@ const HeaderSection = () => {
   const baseOptions = {
     vertical: false,
     width: PAGE_WIDTH / COUNT,
-    height: 100,
+    height: PAGE_WIDTH / 2,
     style: {
       width: PAGE_WIDTH,
     },
@@ -77,8 +77,8 @@ export default HeaderSection;
 
 const styles = StyleSheet.create({
   categoryContainer: {
-    width: Dimensions.get("window").width,
-    height: 100,
+    width: "100%",
+    height: PAGE_WIDTH * 0.27,
     backgroundColor: "#F1EBE7",
   },
   searchBarContainer: {
@@ -86,21 +86,21 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     width: "75%",
-    height: 45,
+    height: PAGE_WIDTH * 0.12,
     backgroundColor: "#F2F2F2",
-    borderRadius: 8,
-    paddingLeft: 10,
-    paddingRight: 10,
-    margin: 20,
-    marginRight: 5,
+    borderRadius: PAGE_WIDTH * 0.02,
+    paddingLeft: PAGE_WIDTH * 0.03,
+    paddingRight: PAGE_WIDTH * 0.03,
+    margin: PAGE_WIDTH * 0.05,
+    marginRight: PAGE_WIDTH * 0.02,
   },
   flex: {
     flexDirection: "row",
     gap: 8,
   },
   optionIconContainer: {
-    width: 45,
-    height: 45,
+    width: PAGE_WIDTH * 0.12,
+    height: PAGE_WIDTH * 0.12,
     backgroundColor: "#F2F2F2",
     marginTop: 20,
     borderRadius: 8,
@@ -112,15 +112,15 @@ const styles = StyleSheet.create({
     height: 100,
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 5,
+    marginHorizontal: 4,
   },
   categoryImage: {
-    width: 50,
-    height: 50,
+    width: PAGE_WIDTH * 0.12,
+    height: PAGE_WIDTH * 0.12,
   },
   categoryText: {
-    marginTop: 5,
+    marginTop: PAGE_WIDTH * 0.02,
     textAlign: "center",
-    fontSize: 12,
+    fontSize: PAGE_WIDTH * 0.03,
   },
 });

@@ -33,6 +33,6 @@ export default CategoriesTab;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginLeft: 25,
+    marginLeft: 22,
   },
 });

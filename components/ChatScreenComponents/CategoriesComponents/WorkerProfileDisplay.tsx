@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, View, ViewStyle } from "react-native";
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from "react-native";
 import React, { FC } from "react";
 
 interface WorkerProfileDisplayProps {
@@ -9,6 +16,8 @@ interface WorkerProfileDisplayProps {
   };
   containerStyle?: ViewStyle;
 }
+
+const PAGE_WIDTH = Dimensions.get("window").width;
 
 const WorkerProfileDisplay: FC<WorkerProfileDisplayProps> = ({
   item,
@@ -33,26 +42,26 @@ export default WorkerProfileDisplay;
 const styles = StyleSheet.create({
   itemContainer: {
     alignItems: "center",
-    margin: 10,
+    margin: PAGE_WIDTH * 0.03,
   },
   profileImageContainer: {
     position: "relative",
   },
   profileImage: {
-    width: 68,
-    height: 68,
-    borderRadius: 50,
+    width: PAGE_WIDTH * 0.177,
+    height: PAGE_WIDTH * 0.177,
+    borderRadius: PAGE_WIDTH * 0.09,
   },
   countryImage: {
-    width: 25,
-    height: 25,
-    borderRadius: 50,
+    width: PAGE_WIDTH * 0.06,
+    height: PAGE_WIDTH * 0.06,
+    borderRadius: PAGE_WIDTH * 0.035,
     position: "absolute",
     right: 0,
   },
   name: {
-    marginTop: 5,
-    fontSize: 12,
+    marginTop: PAGE_WIDTH * 0.02,
+    fontSize: PAGE_WIDTH * 0.03,
     textAlign: "center",
   },
 });
