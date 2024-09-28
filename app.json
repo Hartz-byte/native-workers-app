@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Workers App",
+    "name": "native-workers-app",
     "description": " A native worker management application.",
     "slug": "native-workers-app",
     "version": "1.0.0",
@@ -14,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "y"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/app-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.hartzbyte.nativeworkersapp"
     },
     "web": {
       "bundler": "metro",
@@ -30,6 +32,11 @@
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a4470531-d16d-4a88-8b60-6e6480a1d67e"
+      }
     }
   }
 }
