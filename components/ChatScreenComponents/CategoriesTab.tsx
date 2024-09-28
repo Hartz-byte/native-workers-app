@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
+import HeaderSection from "./CategoriesComponents/HeaderSection";
+
 const CategoriesTab = () => {
   return (
     <View>
-      <Text>CategoriesTab</Text>
+      <HeaderSection />
     </View>
   );
 };
