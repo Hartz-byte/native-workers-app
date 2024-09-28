@@ -40,6 +40,7 @@ const CategoriesTab = () => {
     <FlatList
       data={filteredProfileData}
       renderItem={renderItem}
+      keyExtractor={(item) => item.id.toString()}
       numColumns={4}
       ListHeaderComponent={
         <HeaderSection
@@ -48,6 +49,7 @@ const CategoriesTab = () => {
         />
       }
       showsVerticalScrollIndicator={false}
+      onEndReachedThreshold={0.5}
     />
   );
 };

@@ -1,5 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   TabView,
@@ -18,24 +18,9 @@ type Route = {
   title: string;
 };
 
-const Chat = () => {
-  // state to handle tab index and routes
-  const [index, setIndex] = useState(0);
-  const [routes] = useState<Route[]>([
-    { key: "welcome", title: "Welcome" },
-    { key: "categories", title: "Categories" },
-  ]);
-
-  // scenes for each tab
-  const renderScene = SceneMap({
-    welcome: WelcomeTab,
-    categories: CategoriesTab,
-  });
-
-  // render tab bar
-  const renderTabBar = (
-    props: SceneRendererProps & { navigationState: NavigationState<Route> }
-  ) => {
+// memoized render tab bar component
+const RenderTabBar = memo(
+  (props: SceneRendererProps & { navigationState: NavigationState<Route> }) => {
     return (
       <TabBar
         {...props}
@@ -44,7 +29,22 @@ const Chat = () => {
         labelStyle={styles.labelStyle}
       />
     );
-  };
+  }
+);
+
+const Chat = () => {
+  // state to handle tab index and routes
+  const [index, setIndex] = useState(0);
+  const [routes] = useState<Route[]>([
+    { key: "welcome", title: "Welcome Tab" },
+    { key: "categories", title: "Categories" },
+  ]);
+
+  // scenes for each tab
+  const renderScene = SceneMap({
+    welcome: WelcomeTab,
+    categories: CategoriesTab,
+  });
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -57,7 +57,7 @@ const Chat = () => {
         renderScene={renderScene}
         onIndexChange={setIndex}
         initialLayout={{ width: Dimensions.get("window").width }}
-        renderTabBar={renderTabBar}
+        renderTabBar={(props) => <RenderTabBar {...props} />}
       />
     </SafeAreaView>
   );

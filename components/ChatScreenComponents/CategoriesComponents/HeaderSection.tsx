@@ -55,7 +55,7 @@ const HeaderSection: FC<HeaderSectionProps> = ({
                   onPress={() => onCategorySelect(item.title)}
                   hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                 >
-                  <Image source={item.image} style={styles.categoryImage} />
+                  <Image source={item.icon} style={styles.categoryImage} />
                 </TouchableWithoutFeedback>
               </View>
 

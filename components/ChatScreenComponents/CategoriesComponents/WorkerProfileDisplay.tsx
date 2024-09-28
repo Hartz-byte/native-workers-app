@@ -14,7 +14,7 @@ const PAGE_WIDTH = Dimensions.get("window").width;
 interface WorkerProfileDisplayProps {
   item: {
     profileImage: any;
-    countryImage: any;
+    country: any;
     name: string;
   };
   containerStyle?: ViewStyle;
@@ -29,7 +29,7 @@ const WorkerProfileDisplay: FC<WorkerProfileDisplayProps> = ({
       {/* profile and country images */}
       <View style={styles.profileImageContainer}>
         <Image source={item.profileImage} style={styles.profileImage} />
-        <Image source={item.countryImage} style={styles.countryImage} />
+        <Image source={item.country} style={styles.countryImage} />
       </View>
 
       {/* name */}
