@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+# Worker Profiles App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+The **Worker Profiles App** is a React Native application developed using Expo that allows users to browse and search for various worker profiles based on their categories. The app features a tab navigation system, a search functionality, and a visually appealing carousel of icons representing different worker categories.
 
-1. Install dependencies
+## Features
+
+- **Two Tabs Navigation**: 
+  - **Welcome Tab**: Displays a welcome message.
+  - **Categories Tab**: Lists worker profiles categorized by their roles.
+
+- **Search Functionality**: 
+  - Users can filter worker profiles based on their names.
+
+- **Category Filteration**: 
+  - Users can filter worker profiles based on their work category.
+
+- **Carousel Slider**: 
+  - Displays different worker categories using icons.
+
+- **Responsive Design**: 
+  - The app is designed to be responsive across different screen sizes.
+
+
+## Tech Stack
+
+- **React Native**: Framework for building mobile applications.
+- **Expo**: Toolchain for developing and deploying React Native apps.
+- **React Navigation**: Library for navigating between screens.
+- **React Native Vector Icons**: Icons for categorizing workers.
+- **React Native Snap Carousel**: For the carousel slider.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   https://github.com/Hartz-byte/native-workers-app.git
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Testing
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+ - Test the application on both Android and iOS devices to ensure compatibility.
+ - Verify the navigation between tabs and the filtering of workers based on categories.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Build and Deployment
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+To generate an APK for Android, run:
+   ```bash
+    eas build --platform android
+   ```
